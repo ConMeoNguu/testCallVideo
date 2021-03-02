@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>tund test WebRTC</title>
+    <script src="jquery.js"></script>
+    <script src="peer.js"></script>
+    <script src="socket.io.min.js"></script>
+</head>
+
+<body>
+    <div id="div-chat">
+        <h3 id="ten">user name: </h3>
+        <p>User Online:</p>
+        <ul id="listUser"></ul>
+        <!-- <h3 id="user-id">your id: </h3> -->
+        <br /><br />
+        <video id="localStream" width="300" controls></video>
+        <br /><br />
+        <video id="remoteStream" width="300" controls></video>
+        <br /><br />
+        <button id="endCall">Kết thúc</button>
+    </div>
+    <div id="div-login">
+        <input type="text" id="name-user" placeholder="User name">
+        <button id="btn-login">log in</button>
+    </div>
+    <div id="div-toCall">
+        <p id="titleTo"></p>
+        <button id="refuseTo">Kết thúc</button>
+    </div>
+    
+    <div id="div-fromCall">
+        <p id="titleFrom"></p>
+        <button id="accept">Chấp nhận</button>
+        <button id="refuseFrom">Từ chối</button>
+    </div>
+
+    <!-- <input type="text" id="remoteId" placeholder="User id">
+        <button id="btn-call">Call</button> -->
+</body>
+<script src="main.js"></script>
+
+</html>
